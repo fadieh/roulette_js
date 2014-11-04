@@ -15,5 +15,7 @@ Roulette.prototype.setColourToRed = function() {
 Roulette.prototype.setColourToNumbers = function() {
   if (this.number == 0)
   { this.colour = null }
+  else if (this.number == 1)
+  { this.colour = 'red'}
 
 };

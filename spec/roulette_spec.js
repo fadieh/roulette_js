@@ -20,4 +20,10 @@ it ('0 has no colour', function(){
   expect(roulette.colour).toBe(null)
 });
 
+it ('1 should be red', function(){
+  roulette.number = 1
+  roulette.setColourToNumbers()
+  expect(roulette.colour).toBe('red')
+});
+
 });
