@@ -3,6 +3,7 @@ function Roulette() {
   this.number =
   this.colour = ''
   this.third = ''
+  this.turnTaken = false
 };
 
 // SETTING COLOURS TO NUMBERS
@@ -34,4 +35,8 @@ Roulette.prototype.setThirdToNumber = function () {
   else if ((this.number >= 25) && (this.number <= 36))
   { this.third = 3 }
   else this.third = null
+};
+
+Roulette.prototype.takeTurn = function () {
+  this.turnTaken = true
 };

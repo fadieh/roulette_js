@@ -50,4 +50,9 @@ it ('25 should have the third type of 3', function(){
   expect(roulette.third).toBe(3)
 });
 
+it ('should be able to take a turn', function(){
+  roulette.takeTurn()
+  expect(roulette.turnTaken).toBe(true)
+});
+
 });
