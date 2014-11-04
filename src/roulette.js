@@ -4,6 +4,7 @@ function Roulette() {
   this.colour =
   this.third = ''
   this.turnTaken = false
+  this.totalBet = 1
 };
 
 // SETTING COLOURS TO NUMBERS
@@ -11,18 +12,6 @@ function Roulette() {
 Roulette.prototype.setColourToNumbers = function() {
   var wheel = [null, "red", "black", "red", "black", "red", "black", "red", "black", "red", "black", "black", "red", "black", "red", "black", "red", "black", "red", "red", "black", "red", "black", "red", "black", "red", "black", "red", "black", "black", "red", "black", "red", "black", "red", "black", "red"];
   this.colour = wheel[this.number];
-
-  // this.colour = 3;
-  // var colors = {
-  //   'red' : [2,4,6,8,10,11,13,15,17,20,22,24,26,28,29,31,33,35],
-  //   'black' : [1,3,5,7,9,12,14,16,18,19,21,23,25,27,30,32,34,36]
-  // }
-  //
-  // for (var k in colors) {
-  //   if (colors[k].indexOf(this.number) > 0) {
-  //     this.colour = k;
-  //   }
-  // }
 };
 
 
@@ -63,4 +52,8 @@ Roulette.prototype.takeTurn = function () {
   this.number = Math.floor((Math.random()*36) + 0);
   this.setColourToNumbers()
   this.setThirdToNumber()
+};
+
+Roulette.prototype.placeBet = function(bet) {
+
 };

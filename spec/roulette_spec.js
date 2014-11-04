@@ -61,4 +61,9 @@ it ('should randomly generate a number when a turn is taken', function(){
   expect(roulette.number).toBeLessThan(37)
 });
 
+it ('should be able to place a bet', function(){
+  roulette.placeBet(1)
+  expect(roulette.totalBet).toEqual(1)
+});
+
 });
