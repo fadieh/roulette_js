@@ -32,4 +32,22 @@ it ('2 should be black', function(){
   expect(roulette.colour).toBe('black')
 });
 
+it ('1 should have the third type of 1', function(){
+  roulette.number = 1
+  roulette.setThirdToNumber()
+  expect(roulette.third).toBe(1)
+});
+
+it ('13 should have the third type of 2', function(){
+  roulette.number = 13
+  roulette.setThirdToNumber()
+  expect(roulette.third).toBe(2)
+});
+
+it ('25 should have the third type of 3', function(){
+  roulette.number = 25
+  roulette.setThirdToNumber()
+  expect(roulette.third).toBe(3)
+});
+
 });
