@@ -26,4 +26,10 @@ it ('1 should be red', function(){
   expect(roulette.colour).toBe('red')
 });
 
+it ('2 should be black', function(){
+  roulette.number = 2
+  roulette.setColourToNumbers()
+  expect(roulette.colour).toBe('black')
+});
+
 });
