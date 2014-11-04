@@ -67,4 +67,10 @@ it ('should be able to place a bet', function(){
   expect(roulette.totalBet).toEqual(3)
 });
 
+it ('should clear total bet after a turn is taken', function(){
+  roulette.placeBet(10)
+  roulette.takeTurn()
+  expect(roulette.totalBet).toEqual(0)
+});
+
 });

@@ -43,6 +43,7 @@ Roulette.prototype.takeTurn = function () {
   this.number = Math.floor((Math.random()*36) + 0);
   this.setColourToNumbers()
   this.setThirdToNumber()
+  this.totalBet = 0
 };
 
 Roulette.prototype.placeBet = function(bet) {
