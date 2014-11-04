@@ -63,7 +63,8 @@ it ('should randomly generate a number when a turn is taken', function(){
 
 it ('should be able to place a bet', function(){
   roulette.placeBet(1)
-  expect(roulette.totalBet).toEqual(1)
+  roulette.placeBet(2)
+  expect(roulette.totalBet).toEqual(3)
 });
 
 });

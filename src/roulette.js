@@ -4,24 +4,15 @@ function Roulette() {
   this.colour =
   this.third = ''
   this.turnTaken = false
-  this.totalBet = 1
+  this.totalBet = 0
 };
 
 // SETTING COLOURS TO NUMBERS
 
 Roulette.prototype.setColourToNumbers = function() {
-  var wheel = [null, "red", "black", "red", "black", "red", "black", "red", "black", "red", "black", "black", "red", "black", "red", "black", "red", "black", "red", "red", "black", "red", "black", "red", "black", "red", "black", "red", "black", "black", "red", "black", "red", "black", "red", "black", "red"];
+  wheel = [null, "red", "black", "red", "black", "red", "black", "red", "black", "red", "black", "black", "red", "black", "red", "black", "red", "black", "red", "red", "black", "red", "black", "red", "black", "red", "black", "red", "black", "black", "red", "black", "red", "black", "red", "black", "red"];
   this.colour = wheel[this.number];
 };
-
-
-//   if (this.number == 2 || this.number == 4 || this.number == 6 || this.number == 8 || this.number == 10 || this.number == 11 || this.number == 13 || this.number == 15 || this.number == 17 || this.number == 20 || this.number == 22 || this.number == 24 || this.number == 26 || this.number == 29 || this.number == 28 || this.number == 29 || this.number == 31 || this.number == 33 || this.number == 35)
-//   { this.setColourToBlack() }
-//   else if (this.number == 1 || this.number == 3 || this.number == 5 || this.number == 7 || this.number == 9 || this.number == 12 || this.number == 14 || this.number == 16 || this.number == 18 || this.number == 19 || this.number == 21 || this.number == 23 || this.number == 25 || this.number == 27 || this.number == 30 || this.number == 32 || this.number == 34 || this.number == 36)
-//   { this.setColourToRed() }
-//   else
-//   { this.colour = null}
-
 
 Roulette.prototype.setColourToBlack = function() {
   this.colour = "black"
@@ -55,5 +46,5 @@ Roulette.prototype.takeTurn = function () {
 };
 
 Roulette.prototype.placeBet = function(bet) {
-
+  this.totalBet = this.totalBet + bet
 };
