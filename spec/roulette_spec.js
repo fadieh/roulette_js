@@ -55,4 +55,10 @@ it ('should be able to take a turn', function(){
   expect(roulette.turnTaken).toBe(true)
 });
 
+it ('should randomly generate a number when a turn is taken', function(){
+  roulette.takeTurn()
+  expect(roulette.number).toBeGreaterThan(-1)
+  expect(roulette.number).toBeLessThan(37)
+});
+
 });
