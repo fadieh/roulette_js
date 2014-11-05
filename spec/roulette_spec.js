@@ -4,16 +4,6 @@ describe ('Roulette', function() {
       roulette = new Roulette
   });
 
-it ('will have a colour type red', function(){
-  roulette.setColourToRed()
-  expect(roulette.colour).toEqual("red")
-});
-
-it ('will have a colour type black', function(){
-  roulette.setColourToBlack()
-  expect(roulette.colour).toEqual("black")
-});
-
 it ('0 has no colour', function(){
   roulette.number = 0
   roulette.setColourToNumbers()
@@ -71,6 +61,12 @@ it ('should clear total bet after a turn is taken', function(){
   roulette.placeBet(10)
   roulette.takeTurn()
   expect(roulette.totalBet).toEqual(0)
+});
+
+it ('numbers should have a row', function(){
+  roulette.number = 1
+  roulette.setRowToNumber()
+  expect(roulette.row).toEqual(1)
 });
 
 });

@@ -5,6 +5,8 @@ function Roulette() {
   this.third = ''
   this.turnTaken = false
   this.totalBet = 0
+  this.winnings = 0
+  this.row = 0
 };
 
 // SETTING COLOURS TO NUMBERS
@@ -14,19 +16,7 @@ Roulette.prototype.setColourToNumbers = function() {
   this.colour = wheel[this.number];
 };
 
-Roulette.prototype.setColourToBlack = function() {
-  this.colour = "black"
-};
-
-Roulette.prototype.setColourToRed = function() {
-  this.colour = "red"
-};
-
-Roulette.prototype.setZeroToNoColour = function() {
-  this.colour = null
-};
-
-// SETTING THIRDS TO NUMBERS
+// SETTING THIRDS/ROWS TO NUMBERS
 
 Roulette.prototype.setThirdToNumber = function () {
   if (this.number < 13)
@@ -38,6 +28,12 @@ Roulette.prototype.setThirdToNumber = function () {
   else this.third = null
 };
 
+Roulette.prototype.setRowToNumber = function () {
+  this.row = 1
+};
+
+// GAMEPLAY
+
 Roulette.prototype.takeTurn = function () {
   this.turnTaken = true
   this.number = Math.floor((Math.random()*36) + 0);
@@ -45,6 +41,8 @@ Roulette.prototype.takeTurn = function () {
   this.setThirdToNumber()
   this.totalBet = 0
 };
+
+// BETTING
 
 Roulette.prototype.placeBet = function(bet) {
   this.totalBet = this.totalBet + bet
