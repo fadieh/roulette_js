@@ -7,6 +7,7 @@ function Roulette() {
   this.totalBet = 0
   this.winnings = 0
   this.row = 0
+  this.parity = 'odd'
 };
 
 // SETTING COLOURS TO NUMBERS
@@ -19,7 +20,7 @@ Roulette.prototype.setColourToNumbers = function() {
 // SETTING THIRDS/ROWS TO NUMBERS
 
 Roulette.prototype.setThirdToNumber = function () {
-  if (this.number < 13)
+  if ((this.number > 0) && (this.number < 13))
   { this.third = 1 }
   else if ((this.number >= 13) && (this.number <= 24))
   { this.third = 2 }

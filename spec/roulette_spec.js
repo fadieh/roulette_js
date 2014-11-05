@@ -69,4 +69,9 @@ it ('numbers should have a row', function(){
   expect(roulette.row).toEqual(1)
 });
 
+it ('numbers should be odd', function(){
+  roulette.number = 1
+  expect(roulette.parity).toEqual('odd')
+});
+
 });
