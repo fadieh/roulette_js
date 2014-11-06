@@ -69,9 +69,19 @@ it ('numbers should have a row', function(){
   expect(roulette.row).toEqual(1)
 });
 
-it ('numbers should be odd', function(){
+it ('numbers can be odd', function(){
   roulette.number = 1
   expect(roulette.parity).toEqual('odd')
+});
+
+// it ('numbers can be even', function(){
+//   roulette.number = 2
+//   expect(roulette.party).toEqual('even')
+// });
+
+it ('numbers are 1 to 18', function(){
+  roulette.number = 18
+  expect(roulette.range).toEqual('1-18')
 });
 
 });

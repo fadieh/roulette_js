@@ -8,16 +8,23 @@ function Roulette() {
   this.winnings = 0
   this.row = 0
   this.parity = 'odd'
+  this.range = '1-18'
 };
 
-// SETTING COLOURS TO NUMBERS
+// SETTING THE
+// COLOURS
+// PARITY
+// ROWS
+// THIRD
 
 Roulette.prototype.setColourToNumbers = function() {
   wheel = [null, "red", "black", "red", "black", "red", "black", "red", "black", "red", "black", "black", "red", "black", "red", "black", "red", "black", "red", "red", "black", "red", "black", "red", "black", "red", "black", "red", "black", "black", "red", "black", "red", "black", "red", "black", "red"];
   this.colour = wheel[this.number];
 };
 
-// SETTING THIRDS/ROWS TO NUMBERS
+Roulette.prototype.setParity = function() {
+
+};
 
 Roulette.prototype.setThirdToNumber = function () {
   if ((this.number > 0) && (this.number < 13))
