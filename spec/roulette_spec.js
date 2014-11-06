@@ -75,6 +75,18 @@ it ('4 should be row 1', function(){
   expect(roulette.row).toEqual(1)
 });
 
+it ('5 should be row 2', function(){
+  roulette.number = 5
+  roulette.setRowToNumber()
+  expect(roulette.row).toEqual(2)
+});
+
+it ('6 should be row 3', function(){
+  roulette.number = 6
+  roulette.setRowToNumber()
+  expect(roulette.row).toEqual(3)
+});
+
 it ('numbers can be odd', function(){
   roulette.number = 1
   roulette.setParity()
