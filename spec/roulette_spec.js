@@ -100,4 +100,11 @@ it ('should be able to place a bet on a number', function(){
   expect(roulette.winnings).toEqual(35)
 });
 
+it ('should be able to place a bet between 2 numbers', function(){
+  roulette.placeBetOn2Numbers(1, 2, 3)
+  roulette.number = 2
+  this.turnTaken = true
+  expect(roulette.winnings).toEqual(17)
+});
+
 });

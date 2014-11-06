@@ -68,5 +68,9 @@ Roulette.prototype.placeBet = function(bet) {
 };
 
 Roulette.prototype.placeBetOnNumber = function(bet, number) {
-  this.winnings = 35
-}
+  this.winnings = bet * 35
+};
+
+Roulette.prototype.placeBetOn2Numbers = function(bet, number1, number2) {
+  this.winnings = bet * 17
+};
