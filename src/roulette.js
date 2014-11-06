@@ -11,12 +11,21 @@ function Roulette() {
   this.range = '1-18'
 };
 
-// SETTING THE
-// COLOURS
-// PARITY
-// ROWS
-// THIRD
-// RANGE
+// ---- GAMEPLAY ----
+// -- TAKING A TURN --
+
+Roulette.prototype.takeTurn = function () {
+  this.turnTaken = true
+  this.totalBet = 0
+  this.setColourToNumbers()
+  this.setParity()
+  this.setThirdToNumber()
+  this.setRowToNumber()
+  this.setRange()
+};
+
+// COLOURS, PARITY, THIRDS
+//
 
 Roulette.prototype.setColourToNumbers = function() {
   wheel = [null, "red", "black", "red", "black", "red", "black", "red", "black", "red", "black", "black", "red", "black", "red", "black", "red", "black", "red", "red", "black", "red", "black", "red", "black", "red", "black", "red", "black", "black", "red", "black", "red", "black", "red", "black", "red"];
@@ -24,7 +33,11 @@ Roulette.prototype.setColourToNumbers = function() {
 };
 
 Roulette.prototype.setParity = function() {
-
+  if (this.number % 2 === 0)
+  { this.parity = 'even' }
+  else if (this.number % 2 === 1)
+  { this.parity = 'odd' }
+  else { this.parity = null }
 };
 
 Roulette.prototype.setThirdToNumber = function () {
@@ -46,16 +59,6 @@ Roulette.prototype.setRange = function () {
   { this.range = '1-18'}
   else if ((this.number >= 19) && (this.number <= 36))
   { this.range = '19-36'}
-};
-
-// GAMEPLAY
-
-Roulette.prototype.takeTurn = function () {
-  this.turnTaken = true
-  this.number = Math.floor((Math.random()*36) + 0);
-  this.setColourToNumbers()
-  this.setThirdToNumber()
-  this.totalBet = 0
 };
 
 // BETTING
