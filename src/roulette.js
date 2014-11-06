@@ -33,8 +33,12 @@ Roulette.prototype.setColourToNumbers = function() {
   this.colour = wheel[this.number];
 };
 
-Roulette.prototype.setParity = function(number) {
-  (number & 1) ? this.parity = 'odd' : this.parity = 'even';
+Roulette.prototype.setParity = function() {
+  if (this.number % 2 === 0)
+  { this.parity = 'even' }
+  else if (this.number % 2 === 1)
+  { this.parity = 'odd' }
+  else { this.parity = null }
 };
 
 Roulette.prototype.setThirdToNumber = function () {
@@ -53,14 +57,14 @@ Roulette.prototype.setRowToNumber = function () {
   else if (this.number % 3 == 2)
     { this.row = 2 }
   else if (this.number % 3 == 0)
-    { this.row = 3}
+    { this.row = 3 }
 };
 
 Roulette.prototype.setRange = function () {
   if ((this.number > 0) && (this.number <= 18))
-  { this.range = '1-18'}
+  { this.range = '1-18' }
   else if ((this.number >= 19) && (this.number <= 36))
-  { this.range = '19-36'}
+  { this.range = '19-36' }
 };
 
 // BETTING
@@ -70,13 +74,16 @@ Roulette.prototype.placeBet = function(bet) {
 };
 
 Roulette.prototype.placeBetOnNumber = function(bet, number) {
+  this.placeBet(bet)
   this.winnings = bet * 35
 };
 
 Roulette.prototype.placeBetOn2Numbers = function(bet, number1, number2) {
+  this.placeBet(bet)
   this.winnings = bet * 17
 };
 
 Roulette.prototype.placeBetOn4Numbers = function(bet, number1,number2,number3,number4) {
+  this.placeBet(bet)
   this.winnings = bet * 8
 };

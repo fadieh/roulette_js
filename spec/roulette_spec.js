@@ -89,13 +89,13 @@ it ('6 should be row 3', function(){
 
 it ('numbers can be odd', function(){
   roulette.number = 1
-  roulette.takeTurn()
+  roulette.setParity()
   expect(roulette.parity).toEqual('odd')
 });
 
 it ('numbers can be even', function(){
   roulette.number = 2
-  roulette.takeTurn()
+  roulette.setParity()
   expect(roulette.parity).toEqual('even')
 });
 
@@ -110,6 +110,10 @@ it ('numbers are 18-36', function(){
   roulette.setRange()
   expect(roulette.range).toEqual('19-36')
 });
+
+//
+// BETTING
+//
 
 it ('should be able to place a bet', function(){
   roulette.placeBet(1)
@@ -140,6 +144,10 @@ it ('should be able to place a bet between 2 numbers', function(){
 it ('should be able to place a bet on 4 numbers', function(){
   roulette.placeBetOn4Numbers(1, 2,3,4,5)
   expect(roulette.winnings).toEqual(8)
+});
+
+it ('should be able to win a bet', function(){
+  roulette.placeBetOnNumber(1,2)
 });
 
 });
