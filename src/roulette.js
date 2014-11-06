@@ -16,6 +16,7 @@ function Roulette() {
 // PARITY
 // ROWS
 // THIRD
+// RANGE
 
 Roulette.prototype.setColourToNumbers = function() {
   wheel = [null, "red", "black", "red", "black", "red", "black", "red", "black", "red", "black", "black", "red", "black", "red", "black", "red", "black", "red", "red", "black", "red", "black", "red", "black", "red", "black", "red", "black", "black", "red", "black", "red", "black", "red", "black", "red"];
@@ -38,6 +39,13 @@ Roulette.prototype.setThirdToNumber = function () {
 
 Roulette.prototype.setRowToNumber = function () {
   this.row = 1
+};
+
+Roulette.prototype.setRange = function () {
+  if ((this.number > 0) && (this.number <= 18))
+  { this.range = '1-18'}
+  else if ((this.number >= 19) && (this.number <= 36))
+  { this.range = '19-36'}
 };
 
 // GAMEPLAY

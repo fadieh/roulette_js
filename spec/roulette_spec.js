@@ -84,4 +84,10 @@ it ('numbers are 1 to 18', function(){
   expect(roulette.range).toEqual('1-18')
 });
 
+it ('numbers are 18-36', function(){
+  roulette.number = 19
+  roulette.setRange()
+  expect(roulette.range).toEqual('19-36')
+});
+
 });
