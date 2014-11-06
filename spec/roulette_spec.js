@@ -89,13 +89,13 @@ it ('6 should be row 3', function(){
 
 it ('numbers can be odd', function(){
   roulette.number = 1
-  roulette.setParity()
+  roulette.takeTurn()
   expect(roulette.parity).toEqual('odd')
 });
 
 it ('numbers can be even', function(){
   roulette.number = 2
-  roulette.setParity()
+  roulette.takeTurn()
   expect(roulette.parity).toEqual('even')
 });
 
