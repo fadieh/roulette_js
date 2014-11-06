@@ -51,11 +51,19 @@ it ('should randomly generate a number when a turn is taken', function(){
   expect(roulette.number).toBeLessThan(37)
 });
 
-it ('numbers should have a row', function(){
+it ('1 should be row 1', function(){
   roulette.number = 1
   roulette.setRowToNumber()
   expect(roulette.row).toEqual(1)
 });
+
+it ('2 should be row 2', function(){
+  roulette.number = 2
+  roulette.setRowToNumber()
+  expect(roulette.row).toEqual(2)
+});
+
+
 
 it ('numbers can be odd', function(){
   roulette.number = 1

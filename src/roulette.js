@@ -51,7 +51,10 @@ Roulette.prototype.setThirdToNumber = function () {
 };
 
 Roulette.prototype.setRowToNumber = function () {
-  this.row = 1
+  if (this.number == 1)
+    { this.row = 1 }
+  else if (this.number == 2)
+    { this.row = 2 }
 };
 
 Roulette.prototype.setRange = function () {
