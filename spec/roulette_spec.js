@@ -51,18 +51,6 @@ it ('should randomly generate a number when a turn is taken', function(){
   expect(roulette.number).toBeLessThan(37)
 });
 
-it ('should be able to place a bet', function(){
-  roulette.placeBet(1)
-  roulette.placeBet(2)
-  expect(roulette.totalBet).toEqual(3)
-});
-
-it ('should clear total bet after a turn is taken', function(){
-  roulette.placeBet(10)
-  roulette.takeTurn()
-  expect(roulette.totalBet).toEqual(0)
-});
-
 it ('numbers should have a row', function(){
   roulette.number = 1
   roulette.setRowToNumber()
@@ -91,6 +79,25 @@ it ('numbers are 18-36', function(){
   roulette.number = 19
   roulette.setRange()
   expect(roulette.range).toEqual('19-36')
+});
+
+it ('should be able to place a bet', function(){
+  roulette.placeBet(1)
+  roulette.placeBet(2)
+  expect(roulette.totalBet).toEqual(3)
+});
+
+it ('should clear total bet after a turn is taken', function(){
+  roulette.placeBet(10)
+  roulette.takeTurn()
+  expect(roulette.totalBet).toEqual(0)
+});
+
+it ('should be able to place a bet on a number', function(){
+  roulette.placeBetOnNumber(1, 2)
+  roulette.number = 2
+  this.turnTaken = true
+  expect(roulette.winnings).toEqual(35)
 });
 
 });

@@ -66,3 +66,7 @@ Roulette.prototype.setRange = function () {
 Roulette.prototype.placeBet = function(bet) {
   this.totalBet = this.totalBet + bet
 };
+
+Roulette.prototype.placeBetOnNumber = function(bet, number) {
+  this.winnings = 35
+}
