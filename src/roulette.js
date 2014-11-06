@@ -55,6 +55,8 @@ Roulette.prototype.setRowToNumber = function () {
     { this.row = 1 }
   else if (this.number == 2)
     { this.row = 2 }
+    else
+      { this.row = 3}
 };
 
 Roulette.prototype.setRange = function () {
