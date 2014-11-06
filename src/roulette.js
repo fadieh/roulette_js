@@ -74,3 +74,7 @@ Roulette.prototype.placeBetOnNumber = function(bet, number) {
 Roulette.prototype.placeBetOn2Numbers = function(bet, number1, number2) {
   this.winnings = bet * 17
 };
+
+Roulette.prototype.placeBetOn4Numbers = function(bet, number1,number2,number3,number4) {
+  this.winnings = bet * 8
+};

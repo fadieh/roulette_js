@@ -107,4 +107,9 @@ it ('should be able to place a bet between 2 numbers', function(){
   expect(roulette.winnings).toEqual(17)
 });
 
+it ('should be able to place a bet on 4 numbers', function(){
+  roulette.placeBetOn4Numbers(1, 2,3,4,5)
+  expect(roulette.winnings).toEqual(8)
+});
+
 });
