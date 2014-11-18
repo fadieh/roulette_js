@@ -163,6 +163,11 @@ it ('should be able to place a bet on a row', function(){
   expect(roulette.rowBet).toEqual([[1,1]])
 });
 
+it ('should be able to place bet on a range', function(){
+  roulette.placeBetOnRange(1, '1-18')
+  expect(roulette.rangeBet).toEqual([[1, '1-18']])
+});
+
 // it ('should be able to win £35 with a £1 single bet', function(){
 //   roulette.placeBetOnNumber(1, 1)
 //   roulette.takeTurn()
