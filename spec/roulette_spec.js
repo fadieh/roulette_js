@@ -127,27 +127,26 @@ it ('should clear total bet after a turn is taken', function(){
   expect(roulette.totalBet).toEqual(0)
 });
 
-it ('should be able to place a bet on a number', function(){
+it ('should be able to place a bet on 1 number', function(){
   roulette.placeBetOnNumber(1, 2)
-  roulette.number = 2
-  this.turnTaken = true
-  expect(roulette.winnings).toEqual(35)
+  // price, number
+  expect(roulette.singleBet).toEqual([2])
 });
 
-it ('should be able to place a bet between 2 numbers', function(){
-  roulette.placeBetOn2Numbers(1, 2, 3)
-  roulette.number = 2
-  this.turnTaken = true
-  expect(roulette.winnings).toEqual(17)
-});
+// it ('should be able to place a bet between 2 numbers', function(){
+//   roulette.placeBetOn2Numbers(1, 2, 3)
+//   roulette.number = 2
+//   this.turnTaken = true
+//   expect(roulette.winnings).toEqual(17)
+// });
 
-it ('should be able to place a bet on 4 numbers', function(){
-  roulette.placeBetOn4Numbers(1, 2,3,4,5)
-  expect(roulette.winnings).toEqual(8)
-});
+// it ('should be able to place a bet on 4 numbers', function(){
+//   roulette.placeBetOn4Numbers(1, 2,3,4,5)
+//   expect(roulette.winnings).toEqual(8)
+// });
 
-it ('should be able to win a bet', function(){
-  roulette.placeBetOnNumber(1,2)
-});
+// it ('should be able to win a bet', function(){
+
+// });
 
 });
