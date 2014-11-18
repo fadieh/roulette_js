@@ -132,15 +132,15 @@ it ('should be able to record single number bet', function(){
   expect(roulette.singleBet).toEqual([2])
 });
 
-it ('should be able to place a bet between 2 numbers', function(){
+it ('should be able to record double number bet', function(){
   roulette.placeBetOn2Numbers(1, 2, 3)
   expect(roulette.doubleBet).toEqual([2,3])
 });
 
-// it ('should be able to place a bet on 4 numbers', function(){
-//   roulette.placeBetOn4Numbers(1, 2,3,4,5)
-//   expect(roulette.winnings).toEqual(8)
-// });
+it ('should be able to record quadrople number bet', function(){
+  roulette.placeBetOn4Numbers(1, 2,3,4,5)
+  expect(roulette.quadBet).toEqual([2,3,4,5])
+});
 
 // it ('should be able to win a bet', function(){
 
