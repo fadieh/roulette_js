@@ -158,7 +158,10 @@ it ('should be able to place a bet on a third', function(){
   expect(roulette.thirdBet).toEqual([[1,1]])
 });
 
-
+it ('should be able to place a bet on a row', function(){
+  roulette.placeBetOnRow(1, 1)
+  expect(roulette.rowBet).toEqual([[1,1]])
+});
 
 // it ('should be able to win £35 with a £1 single bet', function(){
 //   roulette.placeBetOnNumber(1, 1)
