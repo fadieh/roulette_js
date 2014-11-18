@@ -13,6 +13,7 @@ function Roulette() {
   this.doubleBet = []
   this.quadBet = []
   this.colourBet = []
+  this.parityBet = []
 };
 
 // ---- GAMEPLAY ----
@@ -98,6 +99,11 @@ Roulette.prototype.placeBetOn4Numbers = function(bet, number1,number2,number3,nu
 Roulette.prototype.placeBetOnColour = function(bet, colour) {
   this.placeBet(bet)
   this.colourBet.push([bet, colour])
+};
+
+Roulette.prototype.placeBetOnParity = function(bet, parity) {
+  this.placeBet(bet)
+  this.parityBet.push([bet, parity])
 };
 
 Roulette.prototype.setWinnings = function() {

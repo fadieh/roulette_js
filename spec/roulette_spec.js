@@ -148,6 +148,11 @@ it ('should be able to place a bet on a colour', function(){
   expect(roulette.colourBet).toEqual([[1,'red'], [3, 'black']])
 });
 
+it ('should place a bet on a parity', function(){
+  roulette.placeBetOnParity(1, 'odd')
+  expect(roulette.parityBet).toEqual([[1, 'odd']])
+});
+
 // it ('should be able to win £35 with a £1 single bet', function(){
 //   roulette.placeBetOnNumber(1, 1)
 //   roulette.takeTurn()
