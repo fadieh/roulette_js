@@ -14,6 +14,7 @@ function Roulette() {
   this.quadBet = []
   this.colourBet = []
   this.parityBet = []
+  this.thirdBet = []
 };
 
 // ---- GAMEPLAY ----
@@ -105,6 +106,11 @@ Roulette.prototype.placeBetOnParity = function(bet, parity) {
   this.placeBet(bet)
   this.parityBet.push([bet, parity])
 };
+
+Roulette.prototype.placeBetOnThird = function(bet, third) {
+  this.placeBet(bet)
+  this.thirdBet.push([bet, third])
+}
 
 Roulette.prototype.setWinnings = function() {
 };

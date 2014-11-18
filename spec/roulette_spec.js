@@ -153,6 +153,13 @@ it ('should place a bet on a parity', function(){
   expect(roulette.parityBet).toEqual([[1, 'odd']])
 });
 
+it ('should be able to place a bet on a third', function(){
+  roulette.placeBetOnThird(1, 1)
+  expect(roulette.thirdBet).toEqual([[1,1]])
+});
+
+
+
 // it ('should be able to win £35 with a £1 single bet', function(){
 //   roulette.placeBetOnNumber(1, 1)
 //   roulette.takeTurn()
