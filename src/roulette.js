@@ -78,15 +78,15 @@ Roulette.prototype.placeBet = function(bet) {
 
 Roulette.prototype.placeBetOnNumber = function(bet, number) {
   this.totalBet = this.totalBet + bet
-  this.singleBet.push(number)
+  this.singleBet.push([number])
 };
 
 Roulette.prototype.placeBetOn2Numbers = function(bet, number1, number2) {
   this.totalBet = this.totalBet + bet
-  this.doubleBet.push(number1, number2)
+  this.doubleBet.push([number1, number2])
 };
 
 Roulette.prototype.placeBetOn4Numbers = function(bet, number1,number2,number3,number4) {
   this.totalBet = this.totalBet + bet
-  this.quadBet.push(number1,number2,number3,number4)
+  this.quadBet.push([number1,number2,number3,number4])
 };
