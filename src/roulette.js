@@ -10,6 +10,7 @@ function Roulette() {
   this.parity = 'odd'
   this.range = '1-18'
   this.singleBet = []
+  this.doubleBet = []
 };
 
 // ---- GAMEPLAY ----
@@ -80,8 +81,8 @@ Roulette.prototype.placeBetOnNumber = function(bet, number) {
 };
 
 Roulette.prototype.placeBetOn2Numbers = function(bet, number1, number2) {
-  this.placeBet(bet)
-  this.winnings = bet * 17
+  this.totalBet = this.totalBet + bet
+  this.doubleBet.push(number1, number2)
 };
 
 Roulette.prototype.placeBetOn4Numbers = function(bet, number1,number2,number3,number4) {
