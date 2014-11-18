@@ -12,6 +12,7 @@ function Roulette() {
   this.singleBet = []
   this.doubleBet = []
   this.quadBet = []
+  this.colourBet = []
 };
 
 // ---- GAMEPLAY ----
@@ -26,6 +27,7 @@ Roulette.prototype.takeTurn = function () {
   this.setThirdToNumber()
   this.setRowToNumber()
   this.setRange()
+  this.setWinnings()
 };
 
 // COLOURS, PARITY, THIRDS
@@ -70,23 +72,33 @@ Roulette.prototype.setRange = function () {
   { this.range = '19-36' }
 };
 
-// BETTING
+
+// BETTING 
+// 
 
 Roulette.prototype.placeBet = function(bet) {
   this.totalBet = this.totalBet + bet
 };
 
 Roulette.prototype.placeBetOnNumber = function(bet, number) {
-  this.totalBet = this.totalBet + bet
-  this.singleBet.push([number])
+  this.placeBet(bet)
+  this.singleBet.push([bet, number])
 };
 
 Roulette.prototype.placeBetOn2Numbers = function(bet, number1, number2) {
-  this.totalBet = this.totalBet + bet
-  this.doubleBet.push([number1, number2])
+  this.placeBet(bet)
+  this.doubleBet.push([bet, number1, number2])
 };
 
 Roulette.prototype.placeBetOn4Numbers = function(bet, number1,number2,number3,number4) {
-  this.totalBet = this.totalBet + bet
-  this.quadBet.push([number1,number2,number3,number4])
+  this.placeBet(bet) 
+  this.quadBet.push([bet, number1,number2,number3,number4])
+};
+
+Roulette.prototype.placeBetOnColour = function(bet, colour) {
+  this.placeBet(bet)
+  this.colourBet.push([bet, colour])
+};
+
+Roulette.prototype.setWinnings = function() {
 };

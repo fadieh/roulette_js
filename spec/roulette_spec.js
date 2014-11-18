@@ -129,21 +129,30 @@ it ('should clear total bet after a turn is taken', function(){
 
 it ('should be able to record single number bet', function(){
   roulette.placeBetOnNumber(1, 2)
-  expect(roulette.singleBet).toEqual([[2]])
+  expect(roulette.singleBet).toEqual([[1, 2]])
 });
 
 it ('should be able to record double number bet', function(){
   roulette.placeBetOn2Numbers(1, 2, 3)
-  expect(roulette.doubleBet).toEqual([[2,3]])
+  expect(roulette.doubleBet).toEqual([[1, 2,3]])
 });
 
 it ('should be able to record quadrople number bet', function(){
   roulette.placeBetOn4Numbers(1, 2,3,4,5)
-  expect(roulette.quadBet).toEqual([[2,3,4,5]])
+  expect(roulette.quadBet).toEqual([[1, 2,3,4,5]])
 });
 
-// it ('should be able to win a bet', function(){
+it ('should be able to place a bet on a colour', function(){
+  roulette.placeBetOnColour(1, 'red')
+  roulette.placeBetOnColour(3, 'black')
+  expect(roulette.colourBet).toEqual([[1,'red'], [3, 'black']])
+});
 
+// it ('should be able to win £35 with a £1 single bet', function(){
+//   roulette.placeBetOnNumber(1, 1)
+//   roulette.takeTurn()
+//   roulette.number = 1
+//   expect(roulette.winnings).toEqual(35)
 // });
 
 });
